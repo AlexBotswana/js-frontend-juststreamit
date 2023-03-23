@@ -45,33 +45,6 @@ function fetchSevenBestMovies(categorie) {
 		});
 }
 
-				// 			SLIDESHOWS			//
-
-let slideIndex = [1,1,1,1];
-/* Class the members of each slideshow group with different CSS classes */
-let slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4"]
-showSlides(1, 0);
-showSlides(1, 1);
-showSlides(1, 2);
-showSlides(1, 3);
-
-// Next/previous controls
-function plusSlides(n, no) {
-	showSlides(slideIndex[no] += n, no);
-}
-
-function showSlides(n, no) {
-	let i;
-	let x = document.getElementsByClassName(slideId[no]);
-	console.log(x)
-	if (n > x.length) {slideIndex[no] = 1}
-	if (n < 1) {slideIndex[no] = x.length}
-	for (i = 0; i < x.length; i++) {
-	  x[i].style.display = "none";
-	}
-	x[slideIndex[no]-1].style.display = "block";
-  } 
-
 // MODAL
 function movieDetailsModal(urlMovie) {
 	// Get the modal
@@ -122,12 +95,41 @@ function movieDetailsModal(urlMovie) {
 		})
 }
 
+const slidesContainer = document.getElementById("slides-container");
+const slide = document.querySelector(".slide");
+const slidesContainerAct = document.getElementById("slides-container-act");
+const slideAct = document.querySelector(".slide");
+const prevButton = document.getElementById("slide-arrow-prev");
+const nextButton = document.getElementById("slide-arrow-next");
+const prevButtonAct = document.getElementById("slide-arrow-prev-act");
+const nextButtonAct = document.getElementById("slide-arrow-next-act");
+
+nextButton.addEventListener("click", () => {
+	const slideWidth = slide.clientWidth;  
+	slidesContainer.scrollLeft += slideWidth;
+});
+prevButton.addEventListener("click", () => {
+	const slideWidth = slide.clientWidth;  
+	slidesContainer.scrollLeft -= slideWidth;
+});
+
+nextButtonAct.addEventListener("click", () => {
+	const slideWidth = slide.clientWidth;  
+	slidesContainerAct.scrollLeft += slideWidth;
+});
+prevButtonAct.addEventListener("click", () => {
+	const slideWidth = slide.clientWidth;  
+	slidesContainerAct.scrollLeft -= slideWidth;
+});
+
+
 function main() {
 	fetchBestMovie();
 	fetchSevenBestMovies("");
 	fetchSevenBestMovies("&genre=Action");
-	fetchSevenBestMovies("&genre=comedy");
-	fetchSevenBestMovies("&genre=Sci-Fi");
+	//fetchSevenBestMovies("&genre=comedy");
+	//fetchSevenBestMovies("&genre=Sci-Fi");
+
 }
 
 
