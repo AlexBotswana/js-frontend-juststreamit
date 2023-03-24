@@ -95,15 +95,11 @@ function movieDetailsModal(urlMovie) {
 		})
 }
 
+// Best movies caroussel
 const slidesContainer = document.getElementById("slides-container");
 const slide = document.querySelector(".slide");
-const slidesContainerAct = document.getElementById("slides-container-act");
-const slideAct = document.querySelector(".slide");
 const prevButton = document.getElementById("slide-arrow-prev");
 const nextButton = document.getElementById("slide-arrow-next");
-const prevButtonAct = document.getElementById("slide-arrow-prev-act");
-const nextButtonAct = document.getElementById("slide-arrow-next-act");
-
 nextButton.addEventListener("click", () => {
 	const slideWidth = slide.clientWidth;  
 	slidesContainer.scrollLeft += slideWidth;
@@ -113,6 +109,11 @@ prevButton.addEventListener("click", () => {
 	slidesContainer.scrollLeft -= slideWidth;
 });
 
+// Best action movies caroussel
+const slidesContainerAct = document.getElementById("slides-container-act");
+const slideAct = document.querySelector(".slide");
+const prevButtonAct = document.getElementById("slide-arrow-prev-act");
+const nextButtonAct = document.getElementById("slide-arrow-next-act");
 nextButtonAct.addEventListener("click", () => {
 	const slideWidth = slide.clientWidth;  
 	slidesContainerAct.scrollLeft += slideWidth;
@@ -122,13 +123,40 @@ prevButtonAct.addEventListener("click", () => {
 	slidesContainerAct.scrollLeft -= slideWidth;
 });
 
+// Best comedy movies caroussel
+const slidesContainerCom = document.getElementById("slides-container-com");
+const slideCom = document.querySelector(".slide");
+const prevButtonCom = document.getElementById("slide-arrow-prev-com");
+const nextButtonCom = document.getElementById("slide-arrow-next-com");
+nextButtonCom.addEventListener("click", () => {
+	const slideWidth = slide.clientWidth;  
+	slidesContainerCom.scrollLeft += slideWidth;
+});
+prevButtonCom.addEventListener("click", () => {
+	const slideWidth = slide.clientWidth;  
+	slidesContainerCom.scrollLeft -= slideWidth;
+});
+
+// Best Sci-fi movies caroussel
+const slidesContainerScf = document.getElementById("slides-container-scf");
+const slideScf = document.querySelector(".slide");
+const prevButtonScf = document.getElementById("slide-arrow-prev-scf");
+const nextButtonScf = document.getElementById("slide-arrow-next-scf");
+nextButtonScf.addEventListener("click", () => {
+	const slideWidth = slide.clientWidth;  
+	slidesContainerScf.scrollLeft += slideWidth;
+});
+prevButtonScf.addEventListener("click", () => {
+	const slideWidth = slide.clientWidth;  
+	slidesContainerScf.scrollLeft -= slideWidth;
+});
 
 function main() {
 	fetchBestMovie();
 	fetchSevenBestMovies("");
 	fetchSevenBestMovies("&genre=Action");
-	//fetchSevenBestMovies("&genre=comedy");
-	//fetchSevenBestMovies("&genre=Sci-Fi");
+	fetchSevenBestMovies("&genre=comedy");
+	fetchSevenBestMovies("&genre=Sci-Fi");
 
 }
 

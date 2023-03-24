@@ -125,7 +125,7 @@
    overflow: hidden;
  }
  
- .slides-container, .slides-container-act {
+ .slides-container, .slides-container-act, .slides-container-com, .slides-container-scf {
    height: calc(100vh - 2rem);
    width: 100%;
    display: flex;
@@ -164,13 +164,13 @@
    opacity: 1;
  }
  
- #slide-arrow-prev, #slide-arrow-prev-act {
+ #slide-arrow-prev, #slide-arrow-prev-act, #slide-arrow-prev-com, #slide-arrow-prev-scf {
    left: 0;
    padding-left: 0.25rem;
    border-radius: 0 2rem 2rem 0;
  }
  
- #slide-arrow-next, #slide-arrow-next-act {
+ #slide-arrow-next, #slide-arrow-next-act, #slide-arrow-next-com, #slide-arrow-next-scf {
    right: 0;
    padding-left: 0.75rem;
    border-radius: 2rem 0 0 2rem;
