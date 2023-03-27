@@ -1,178 +1,200 @@
 * {
-   box-sizing: border-box;
-   font-family: Arial, Helvetica, sans-serif;
- }
- 
- html {
-   margin: 0;
-   padding: 0;
- }
- 
- body {
-   height: 100%;
-   background-color: black;
-   color: #333;
-   font-family: Arial, Helvetica, sans-serif;
-   text-align: center;
-   letter-spacing: 0.15em;
-   font-size: 22px;
- }
- 
- header {
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
- }
- 
- 
- h1 {
-   font-family: Arial;
-   text-align: right;
-   background-color: #000;
- }
- 
- h2 {
-   display: flex;
-   font-family: Arial;
-   font-size: 15px;
-   color: #FFFF;
-   background-color: #000;
-   align-items: center;
- }
- 
- h3 {
-   display: flex;
-   justify-content: space-around;
-   font-family: Arial;
-   font-size: 50px;
-   color: #FFFF;
-   background-color: #000;
-   align-items: center;
- }
- 
- 
- 
- 
- .the_best_movie {
-   display: inline-block;
-   justify-content: center;
-   align-items: center;
-   margin: 0;
-   padding: 0px;
- }
- 
- .best_movie {
-   display: inline-block;
-   justify-content: center;
-   align-items: center;
-   margin-left: 35px;
-   padding: 0px;
- }
- 
- /* The Modal (background) */
- .modal {
-   display: none;
-   /* Hidden by default */
-   position: fixed;
-   /* Stay in place */
-   z-index: 1;
-   /* Sit on top */
-   left: 0;
-   top: 0;
-   width: 100%;
-   /* Full width */
-   height: 100%;
-   /* Full height */
-   overflow: auto;
-   /* Enable scroll if needed */
-   background-color: rgb(0, 0, 0);
-   /* Fallback color */
-   background-color: rgba(0, 0, 0, 0.4);
-   /* Black w/ opacity */
- }
- 
- /* Modal Content/Box */
- .modal-content {
-   background-color: #fefefe;
-   margin: 15% auto;
-   /* 15% from the top and centered */
-   padding: 20px;
-   border: 1px solid #888;
-   width: 50%;
-   /* Could be more or less, depending on screen size */
- }
- 
- /* The Close Button */
- .close {
-   color: #aaa;
-   float: right;
-   font-size: 28px;
-   font-weight: bold;
- }
- 
- .close:hover,
- .close:focus {
-   color: black;
-   text-decoration: none;
-   cursor: pointer;
- }
- 
- /*carousel
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  background-color: #221f1f;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  letter-spacing: 0.15em;
+  font-size: 22px;
+}
+
+header {
+  display: block;
+  justify-content: center;
+  background-color:#2d2d2d;
+}
+
+.nav-link {
+  color: #717171;
+}
+
+.logo {
+  width: 20%;
+  display: flex;
+  justify-content: left;
+}
+
+.logo__pic {
+  width: 40%;
+}
+
+h1 {
+  font-family: Arial;
+  color: #fff;
+  margin: 50px;
+}
+
+h2 {
+  font-family: Arial;
+  font-size: 15px;
+  color: #FFFF;
+}
+
+h3 {
+  font-family: Arial;
+  font-size: 50px;
+  color: #fff;
+}
+
+h4 {
+  font-family: Arial;
+  font-size: 15px;
+  color:#888;
+}
+
+.the_best_movie {
+  align-items: center;
+  margin: 0;
+  width: 105%;
+}
+
+.best_movie {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #222222;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  /* Could be more or less, depending on screen size */
+  display: inline-flex;
+}
+
+.modal-content-left {
+  text-align: left;
+}
+
+.modal-content-center {
+  text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*carousel
  */
- .slider-wrapper  {
-   margin: 1rem;
-   position: relative;
-   overflow: hidden;
- }
- 
- .slides-container, .slides-container-act, .slides-container-com, .slides-container-scf {
-   height: calc(100vh - 2rem);
-   width: 100%;
-   display: flex;
-   list-style: none;
-   margin: 0;
-   padding: 0;
-   overflow: scroll;
-   scroll-behavior: smooth;
- }
- 
- .slide {
-   width: 50%;
-   height: 70%;
-   flex: 1 0 20%;
- }
- 
- .slide-arrow {
-   position: absolute;
-   display: flex;
-   top: 0;
-   bottom: 0;
-   margin: auto;
-   height: 4rem;
-   background-color: white;
-   border: none;
-   width: 2rem;
-   font-size: 3rem;
-   padding: 0;
-   cursor: pointer;
-   opacity: 0.5;
-   transition: opacity 100ms;
- }
- 
- .slide-arrow:hover,
- .slide-arrow:focus {
-   opacity: 1;
- }
- 
- #slide-arrow-prev, #slide-arrow-prev-act, #slide-arrow-prev-com, #slide-arrow-prev-scf {
-   left: 0;
-   padding-left: 0.25rem;
-   border-radius: 0 2rem 2rem 0;
- }
- 
- #slide-arrow-next, #slide-arrow-next-act, #slide-arrow-next-com, #slide-arrow-next-scf {
-   right: 0;
-   padding-left: 0.75rem;
-   border-radius: 2rem 0 0 2rem;
- }
- 
+.slider-wrapper {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides-container,
+.slides-container-act,
+.slides-container-com,
+.slides-container-scf {
+  height: calc(100vh - 2rem);
+  width: 100%;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+}
+
+.slide {
+  width: 50%;
+  height: 85%;
+  flex: 1 0 25%;
+  padding: 0 15px;
+}
+
+.slide-arrow {
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 4rem;
+  background-color: white;
+  border: none;
+  width: 2rem;
+  font-size: 3rem;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 100ms;
+}
+
+.slide-arrow:hover,
+.slide-arrow:focus {
+  opacity: 1;
+}
+
+#slide-arrow-prev,
+#slide-arrow-prev-act,
+#slide-arrow-prev-com,
+#slide-arrow-prev-scf {
+  left: 0;
+  padding-left: 0.25rem;
+  border-radius: 0 2rem 2rem 0;
+}
+
+#slide-arrow-next,
+#slide-arrow-next-act,
+#slide-arrow-next-com,
+#slide-arrow-next-scf {
+  right: 0;
+  padding-left: 0.75rem;
+  border-radius: 2rem 0 0 2rem;
+}

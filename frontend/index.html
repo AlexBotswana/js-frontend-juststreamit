@@ -14,8 +14,9 @@
 	<header class="header">
 		<div class="nav">
 			<h1>
+				<a class="logo" href="#"><img src="./logo_JSI.png" class="logo__pic" alt="JustStreamIt Logo"></a>
 				<a href="index.html" class="nav-link">Home</a>
-				<a href="#categories" class="nav-link">Categories</a>
+				<a href="#" class="nav-link">Categories</a>
 			</h1>
 		</div>
 	</header>
@@ -26,27 +27,29 @@
 			<!-- Modal content -->
 			<div class="modal-content">
 				<span class="close">&times;</span>
-				<p id="title-modal"></p>
-				<img src="#" id="img-modal">
-				<h2 id="genres-modal">Genre</h2>
-				<h2 id="year-modal">Year</h2>
-				<h2 id="rated-modal">Rated</h2>
-				<h2 id="imdb-modal">Imdb</h2>
-				<h2 id="directors-modal">Directors</h2>
-				<h2 id="actors-modal">Actors</h2>
-				<h2 id="duration-modal">Duration</h2>
-				<h2 id="countries-modal">Countries</h2>
-				<h2 id="boxoffice-modal">Boxoffice</h2>
-				<h2 id="description-modal">Description</h2>
+				<div class="modal-content-center">
+					<h1 id="title-modal"></h1>
+					<img src="#" id="img-modal">
+				</div>
+				<div class="modal-content-left">
+					<h4>Genre: </h4><h2 id="genres-modal"></h2>
+					<h4>Year: </h4><h2 id="year-modal"></h2>
+					<h4>Rated: </h4><h2 id="rated-modal"></h2>
+					<h4>Imdb: </h4><h2 id="imdb-modal"></h2>
+					<h4>Directors: </h4><h2 id="directors-modal"></h2>
+					<h4>Actors: </h4><h2 id="actors-modal"></h2>
+					<h4>Duration: </h4><h2 id="duration-modal"></h2>
+					<h4>Countries: </h4><h2 id="countries-modal"></h2>
+					<h4>Boxoffice: </h4><h2 id="boxoffice-modal"></h2>
+					<h4>Description: </h4><h2 id="description-modal"></h2>
+				</div>
 			</div>
 		</div>
 	</section>
-	<section>
-		<h3>THE BEST MOVIE</h3>
-		<div class="the_best_movie">
-			<h2><img src="#" id="img-best-movie-top"></h2>
-			<h2 id="title-best-movie-top"></h2>
-		</div>
+	<h3>THE BEST MOVIE</h3>
+	<section class="best_movie">
+		<h3 id="title-best-movie-top"></h3>
+		<img class="the_best_movie" src="#" id="img-best-movie-top" alt="">
 	</section>
 	<!-- Caroussel best movies -->
 	<section class="slider-wrapper">
@@ -59,20 +62,13 @@
 		</button>
 		<h3>BEST MOVIES</h3>
 		<ul class="slides-container" id="slides-container">
-			<img class="slide" src="#" id="img-best-movie0" alt="">
-			<h2 id="title-best-movie0"></h2>
+			<img class="slide" src="#" id="img-best-movie0" alt="">			
 			<img class="slide" src="#" id="img-best-movie1" alt="">
-			<h2 id="title-best-movie1"></h2>
 			<img class="slide" src="#" id="img-best-movie2" alt="">
-			<h2 id="title-best-movie2"></h2>
 			<img class="slide" src="#" id="img-best-movie3" alt="">
-			<h2 id="title-best-movie3"></h2>
 			<img class="slide" src="#" id="img-best-movie4" alt="">
-			<h2 id="title-best-movie4"></h2>
 			<img class="slide" src="#" id="img-best-movie5" alt="">
-			<h2 id="title-best-movie5"></h2>
 			<img class="slide" src="#" id="img-best-movie6" alt="">
-			<h2 id="title-best-movie6"></h2>
 		</ul>
 	</section>
 	<!-- Caroussel best action movies -->
@@ -87,19 +83,12 @@
 		<h3>BEST ACTION MOVIES</h3>
 		<ul class="slides-container-act" id="slides-container-act">
 			<img class="slide" src="#" id="img-best-movie&genre=Action0" alt="">
-			<h2 id="title-best-movie&genre=Action0"></h2>
 			<img class="slide" src="#" id="img-best-movie&genre=Action1" alt="">
-			<h2 id="title-best-movie&genre=Action1"></h2>
 			<img class="slide" src="#" id="img-best-movie&genre=Action2" alt="">
-			<h2 id="title-best-movie&genre=Action2"></h2>
 			<img class="slide" src="#" id="img-best-movie&genre=Action3" alt="">
-			<h2 id="title-best-movie&genre=Action3"></h2>
 			<img class="slide" src="#" id="img-best-movie&genre=Action4" alt="">
-			<h2 id="title-best-movie&genre=Action4"></h2>
 			<img class="slide" src="#" id="img-best-movie&genre=Action5" alt="">
-			<h2 id="title-best-movie&genre=Action5"></h2>
 			<img class="slide" src="#" id="img-best-movie&genre=Action6" alt="">
-			<h2 id="title-best-movie&genre=Action6"></h2>
 		</ul>
 	</section>
 	<!-- Caroussel best comedy movies -->
@@ -114,19 +103,12 @@
 		<h3>BEST COMEDY MOVIES</h3>
 		<ul class="slides-container-com" id="slides-container-com">
 			<img class="slide" src="#" id="img-best-movie&genre=comedy0" alt="">
-			<h2 id="title-best-movie&genre=comedy0"></h2>
 			<img class="slide" src="#" id="img-best-movie&genre=comedy1" alt="">
-			<h2 id="title-best-movie&genre=comedy1"></h2>
 			<img class="slide" src="#" id="img-best-movie&genre=comedy2" alt="">
-			<h2 id="title-best-movie&genre=comedy2"></h2>
 			<img class="slide" src="#" id="img-best-movie&genre=comedy3" alt="">
-			<h2 id="title-best-movie&genre=comedy3"></h2>
 			<img class="slide" src="#" id="img-best-movie&genre=comedy4" alt="">
-			<h2 id="title-best-movie&genre=comedy4"></h2>
 			<img class="slide" src="#" id="img-best-movie&genre=comedy5" alt="">
-			<h2 id="title-best-movie&genre=comedy5"></h2>
 			<img class="slide" src="#" id="img-best-movie&genre=comedy6" alt="">
-			<h2 id="title-best-movie&genre=comedy6"></h2>
 		</ul>
 	</section>
 	<!-- Caroussel best Sci-fi movies -->
@@ -141,19 +123,12 @@
 		<h3>BEST SCI-FI MOVIES</h3>
 		<ul class="slides-container-scf" id="slides-container-scf">
 			<img class="slide" src="#" id="img-best-movie&genre=Sci-Fi0" alt="">
-			<h2 id="title-best-movie&genre=Sci-Fi0"></h2>
 			<img class="slide" src="#" id="img-best-movie&genre=Sci-Fi1" alt="">
-			<h2 id="title-best-movie&genre=Sci-Fi1"></h2>
 			<img class="slide" src="#" id="img-best-movie&genre=Sci-Fi2" alt="">
-			<h2 id="title-best-movie&genre=Sci-Fi2"></h2>
 			<img class="slide" src="#" id="img-best-movie&genre=Sci-Fi3" alt="">
-			<h2 id="title-best-movie&genre=Sci-Fi3"></h2>
 			<img class="slide" src="#" id="img-best-movie&genre=Sci-Fi4" alt="">
-			<h2 id="title-best-movie&genre=Sci-Fi4"></h2>
 			<img class="slide" src="#" id="img-best-movie&genre=Sci-Fi5" alt="">
-			<h2 id="title-best-movie&genre=Sci-Fi5"></h2>
 			<img class="slide" src="#" id="img-best-movie&genre=Sci-Fi6" alt="">
-			<h2 id="title-best-movie&genre=Sci-Fi6"></h2>
 		</ul>
 	</section>
 	<footer>

@@ -32,10 +32,6 @@ function fetchSevenBestMovies(categorie) {
 				let imageUrl = element.image_url
 				let imageHtml = document.getElementById("img-best-movie" + categorie + index)
 				imageHtml.src = imageUrl
-				let titleBestMovie = document.getElementById("title-best-movie" + categorie + index)
-				//check if the title lengh is not to long 
-				if (element.title.length >= 20) titleBestMovie.textContent = `${element.title.substring(0, 20)}...`
-				else titleBestMovie.textContent = element.title
 				//Details for modal window
 				imageHtml.addEventListener('click', () => {
 					//get film url for more detail
@@ -157,7 +153,6 @@ function main() {
 	fetchSevenBestMovies("&genre=Action");
 	fetchSevenBestMovies("&genre=comedy");
 	fetchSevenBestMovies("&genre=Sci-Fi");
-
 }
 
 
