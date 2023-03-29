@@ -20,11 +20,11 @@ body {
 header {
   display: block;
   justify-content: center;
-  background-color:#2d2d2d;
+  background-color:#2b2a2a;
 }
 
 .nav-link {
-  color: #717171;
+  color: #fff;
 }
 
 .logo {

@@ -24,13 +24,15 @@ function fetchBestMovie() {
 }
 
 function fetchSevenBestMovies(categorie) {
-	fetch(url + '/' + "?sort_by=-imdb_score,-votes&page_size=7" + categorie)
+	let suffix = ""
+	if (categorie != "") suffix = "&genre=" + categorie
+	fetch(url + '/' + "?sort_by=-imdb_score,-votes&page_size=7" + suffix)
 		.then(response => response.json())
 		.then(data => {
 			for (let index = 0; index < data.results.length; index++) {
 				let element = data.results[index];
 				let imageUrl = element.image_url
-				let imageHtml = document.getElementById("img-best-movie" + categorie + index)
+				let imageHtml = document.getElementById("img-best-movie-" + categorie + index)
 				imageHtml.src = imageUrl
 				//Details for modal window
 				imageHtml.addEventListener('click', () => {
@@ -150,11 +152,9 @@ prevButtonScf.addEventListener("click", () => {
 function main() {
 	fetchBestMovie();
 	fetchSevenBestMovies("");
-	fetchSevenBestMovies("&genre=Action");
-	fetchSevenBestMovies("&genre=comedy");
-	fetchSevenBestMovies("&genre=Sci-Fi");
+	fetchSevenBestMovies("Action");
+	fetchSevenBestMovies("comedy");
+	fetchSevenBestMovies("Sci-Fi");
 }
-
-
 
 main();
